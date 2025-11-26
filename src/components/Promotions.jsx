@@ -9,7 +9,7 @@ const promos = [
     title: 'Radiografía $25.000 descontable',
     highlight: 'Diagnóstico',
     description:
-      'La radiografía inicial tiene un valor de $25.000. Si inicias ortodoncia u otro tratamiento, ese valor se descuenta de tu plan.',
+      'La radiografía inicial tiene un valor de $25.000. Si inicias ortodoncia, ese valor se descuenta de tu plan.',
   },
   {
     title: '2x1 en brackets Mini Roth',
