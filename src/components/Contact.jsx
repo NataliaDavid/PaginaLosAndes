@@ -1,11 +1,11 @@
 import whatsappIcon from '../assets/whatsapp.webp';
 
 const address = 'Carrera 7 #16-92, Segundo Piso, San Luis, Soacha, Cundinamarca';
-const whatsappNumber = '573174374266';
+const whatsappNumber = '573159633301';
 const whatsappMessage = 'Quisiera más información!';
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 const phoneLink = `tel:+${whatsappNumber}`;
-const displayPhone = '+57 317 437 4266';
+const displayPhone = '+57 315 963 3301';
 
 const Contact = () => (
   <section id="contacto" className="relative isolate overflow-hidden scroll-mt-8 py-8">
