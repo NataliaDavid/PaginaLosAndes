@@ -6,6 +6,7 @@ import Gallery from '../components/Gallery';
 import About from '../components/About';
 import Contact from '../components/Contact';
 import BlogSection from '../components/BlogSection';
+import Promotions from '../components/Promotions';
 import Seo from '../components/Seo';
 import { BUSINESS_ID, OG_IMAGE_URL, SITE_URL, WEBSITE_ID } from '../utils/seo';
 import { getCampaignContent, resolveCampaignKey } from '../utils/campaigns';
@@ -182,6 +183,7 @@ const Home = () => {
       <Hero campaignKey={campaignKey} onServiceModalRequest={handleServiceModalRequest} />
       <SectionCta onNavigate={handleContactNavigation} />
       <Services highlightRequest={serviceModalRequest} />
+      <Promotions />
       <SectionCta onNavigate={handleContactNavigation} />
       <Gallery />
       <SectionCta onNavigate={handleContactNavigation} />

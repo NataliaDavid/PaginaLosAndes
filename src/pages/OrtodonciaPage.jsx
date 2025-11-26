@@ -187,6 +187,103 @@ const OrtodonciaPage = () => {
         </div>
       </section>
 
+      {/* Promociones y beneficios */}
+      <section className="bg-gradient-to-br from-slate-950 via-blue-900 to-cyan-600 py-12 text-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="max-w-3xl">
+            <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100">
+              Promociones
+            </p>
+            <h2
+              className="mt-3 text-3xl font-semibold text-white md:text-4xl"
+              style={{ fontFamily: '"Playfair Display", serif' }}
+            >
+              Descuentos y beneficios en ortodoncia
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm text-cyan-100/90">
+              Aplica para tratamientos en Soacha. La primera consulta es gratuita y los valores de radiografías, retenedores y limpieza
+              final se reconocen o se obsequian según tu plan y puntualidad.
+            </p>
+          </div>
+
+          <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
+            <article className="rounded-3xl bg-white/10 p-6 shadow-[0_30px_80px_-60px_rgba(15,23,42,0.9)] ring-1 ring-white/10">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-cyan-200">Valoración inicial</span>
+              <h3 className="mt-3 text-lg font-semibold text-white" style={{ fontFamily: '"Playfair Display", serif' }}>
+                Primera consulta gratuita
+              </h3>
+              <p className="mt-2 text-sm text-cyan-100/90">
+                Evaluación diagnóstica sin costo. Revisamos tus exámenes, explicamos opciones y armamos tu plan de ortodoncia.
+              </p>
+            </article>
+
+            <article className="rounded-3xl bg-white/10 p-6 shadow-[0_30px_80px_-60px_rgba(15,23,42,0.9)] ring-1 ring-white/10">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-cyan-200">Diagnóstico</span>
+              <h3 className="mt-3 text-lg font-semibold text-white" style={{ fontFamily: '"Playfair Display", serif' }}>
+                Radiografía $25.000 descontable
+              </h3>
+              <p className="mt-2 text-sm text-cyan-100/90">
+                La radiografía tiene un valor de $25.000. Si continúas con ortodoncia u otros servicios, se descuenta de tu tratamiento.
+              </p>
+            </article>
+
+            <article className="rounded-3xl bg-white/10 p-6 shadow-[0_30px_80px_-60px_rgba(15,23,42,0.9)] ring-1 ring-white/10">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-cyan-200">Plan Mini Roth</span>
+              <h3 className="mt-3 text-lg font-semibold text-white" style={{ fontFamily: '"Playfair Display", serif' }}>
+                2x1 en brackets Mini Roth
+              </h3>
+              <p className="mt-2 text-sm text-cyan-100/90">
+                Promoción del plan Mini Roth: paga un tratamiento y el segundo es sin costo para un familiar o pareja, según disponibilidad.
+              </p>
+            </article>
+
+            <article className="rounded-3xl bg-white/10 p-6 shadow-[0_30px_80px_-60px_rgba(15,23,42,0.9)] ring-1 ring-white/10">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-cyan-200">Retención</span>
+              <h3 className="mt-3 text-lg font-semibold text-white" style={{ fontFamily: '"Playfair Display", serif' }}>
+                Retenedor sin costo por puntualidad ($350.000)
+              </h3>
+              <p className="mt-2 text-sm text-cyan-100/90">
+                Asiste puntualmente a cada control y el retenedor final (valor aprox. $350.000) se entrega sin costo al culminar tu
+                tratamiento.
+              </p>
+            </article>
+
+            <article className="rounded-3xl bg-white/10 p-6 shadow-[0_30px_80px_-60px_rgba(15,23,42,0.9)] ring-1 ring-white/10">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-cyan-200">Higiene con brackets</span>
+              <h3 className="mt-3 text-lg font-semibold text-white" style={{ fontFamily: '"Playfair Display", serif' }}>
+                Primera limpieza de ortodoncia al 50% ($100.000)
+              </h3>
+              <p className="mt-2 text-sm text-cyan-100/90">
+                En ortodoncia pueden requerirse varias profilaxis. La primera se realiza con 50% de descuento (valor base $100.000) y se
+                programa según tu evolución.
+              </p>
+            </article>
+          </div>
+
+          <div className="mt-8">
+            <a
+              href="#contacto"
+              className="inline-flex items-center gap-3 rounded-full bg-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-slate-950 shadow-lg transition hover:-translate-y-0.5"
+            >
+              Agendar valoración sin costo
+              <svg
+                className="h-4 w-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden
+              >
+                <path d="M5 12h14" />
+                <path d="M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Agenda breve */}
       <section className="bg-white py-6 text-slate-700">
         <div className="max-w-4xl mx-auto px-6">

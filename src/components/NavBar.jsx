@@ -4,6 +4,7 @@ import logo from '../assets/logoblanco.png';
 import { scrollToHash } from '../utils/scroll';
 
 const sectionLinks = [
+  { label: 'Promociones', hash: '#promociones' },
   { label: 'Servicios', hash: '#servicios' },
   { label: 'Galería', hash: '#galeria' },
   { label: 'Nosotros', hash: '#nosotros' },
