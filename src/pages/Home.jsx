@@ -11,6 +11,7 @@ import Seo from '../components/Seo';
 import { BUSINESS_ID, OG_IMAGE_URL, SITE_URL, WEBSITE_ID } from '../utils/seo';
 import { getCampaignContent, resolveCampaignKey } from '../utils/campaigns';
 import { scrollToHash } from '../utils/scroll';
+import { useVisitTracker } from '../utils/visitTracker';
 
 const SectionCta = ({ onNavigate }) => (
   <div className="flex justify-center px-6 py-6">
@@ -43,6 +44,7 @@ const Home = () => {
   const [searchParams] = useSearchParams();
   const location = useLocation();
   const navigate = useNavigate();
+  useVisitTracker('inicio');
   const mergedSearchParams = useMemo(() => {
     const params = new URLSearchParams();
 

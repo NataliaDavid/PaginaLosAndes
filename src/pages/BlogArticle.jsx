@@ -4,9 +4,11 @@ import Seo from '../components/Seo';
 import { BUSINESS_ID, OG_IMAGE_URL, SITE_URL, WEBSITE_ID } from '../utils/seo';
 import { toIsoDate } from '../utils/dates';
 import blogPosts from '../data/posts';
+import { useVisitTracker } from '../utils/visitTracker';
 
 const BlogArticle = () => {
   const { slug } = useParams();
+  useVisitTracker('blog');
   const post = blogPosts.find((entry) => entry.slug === slug);
   const relatedPosts = blogPosts.filter((entry) => entry.slug !== slug).slice(0, 3);
 
