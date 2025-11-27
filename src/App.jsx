@@ -11,6 +11,7 @@ import SuccessStoriesPage from './pages/SuccessStoriesPage';
 import AgendaPage from './pages/AgendaPage';
 import ContactPage from './pages/ContactPage';
 import OrtodonciaPage from './pages/OrtodonciaPage';
+import WhatsappRedirectPage from './pages/WhatsappRedirectPage';
 import Seo from './components/Seo';
 import { OG_IMAGE_URL, SITE_URL } from './utils/seo';
 import { scrollToHash } from './utils/scroll';
@@ -106,6 +107,7 @@ const App = () => (
       <Route path="casos-de-exito" element={<SuccessStoriesPage />} />
       <Route path="agenda" element={<AgendaPage />} />
       <Route path="contacto" element={<ContactPage />} />
+      <Route path="whatsapp" element={<WhatsappRedirectPage />} />
       <Route path="blogs" element={<BlogIndex />} />
       <Route path="blogs/:slug" element={<BlogArticle />} />
       <Route path="inicio" element={<Navigate to="/" replace />} />

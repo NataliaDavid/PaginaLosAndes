@@ -1,11 +1,8 @@
+import { Link } from 'react-router-dom';
 import whatsappIcon from '../assets/whatsapp.webp';
+import { WHATSAPP_PHONE_LINK, WHATSAPP_DISPLAY_PHONE } from '../utils/whatsapp';
 
 const address = 'Carrera 7 #16-92, Segundo Piso, San Luis, Soacha, Cundinamarca';
-const whatsappNumber = '573159633301';
-const whatsappMessage = 'Quisiera más información!';
-const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-const phoneLink = `tel:+${whatsappNumber}`;
-const displayPhone = '+57 315 963 3301';
 
 const Contact = () => (
   <section id="contacto" className="relative isolate overflow-hidden scroll-mt-8 py-8">
@@ -25,15 +22,13 @@ const Contact = () => (
       </div>
       <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
         <div className="w-full space-y-6 rounded-3xl bg-white p-6 sm:p-8 lg:p-10 shadow-[0_30px_80px_-40px_rgba(6,182,212,0.5)] ring-1 ring-white/70">
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            to="/whatsapp"
             className="group inline-flex w-full items-center justify-center gap-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-7 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white shadow-lg transition hover:scale-[1.02] hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
           >
             <img src={whatsappIcon} alt="WhatsApp" className="h-5 w-5 transition-transform duration-200 group-hover:scale-105" />
             <span>Agenda por WhatsApp</span>
-          </a>
+          </Link>
           <ul className="space-y-4 text-left text-sm text-slate-600">
             <li>
               <span className="block text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Dirección</span>
@@ -41,8 +36,8 @@ const Contact = () => (
             </li>
             <li>
               <span className="block text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Teléfono directo</span>
-              <a className="mt-1 inline-block text-base font-medium text-cyan-600 hover:underline" href={phoneLink}>
-                {displayPhone}
+              <a className="mt-1 inline-block text-base font-medium text-cyan-600 hover:underline" href={WHATSAPP_PHONE_LINK}>
+                {WHATSAPP_DISPLAY_PHONE}
               </a>
             </li>
             <li>
