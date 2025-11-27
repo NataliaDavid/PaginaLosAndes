@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 const sentRoutes = new Set();
-const DEPLOYMENT_FALLBACK_ENDPOINT = 'http://18.191.136.207/api/visits';
+const DEPLOYMENT_FALLBACK_ENDPOINT = 'https://api.losandes-soacha.com/api/visits';
 
 const sanitizeBaseUrl = (value) => value.replace(/\/$/, '');
 
