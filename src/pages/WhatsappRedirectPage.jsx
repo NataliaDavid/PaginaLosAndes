@@ -7,7 +7,7 @@ const WhatsappRedirectPage = () => {
   useEffect(() => {
     const timer = window.setTimeout(() => {
       window.location.replace(WHATSAPP_URL);
-    }, 600);
+    }, 15000);
 
     return () => {
       window.clearTimeout(timer);
