@@ -1,8 +1,51 @@
 import { useEffect } from 'react';
 
 const sentRoutes = new Set();
-const rawBaseUrl = (import.meta.env?.VITE_COUNTER_API_URL ?? '').trim().replace(/\/$/, '');
-const API_ENDPOINT = rawBaseUrl ? `${rawBaseUrl}/api/visits` : '/api/visits';
+const DEPLOYMENT_FALLBACK_ENDPOINT = 'http://18.191.136.207/api/visits';
+
+const sanitizeBaseUrl = (value) => value.replace(/\/$/, '');
+
+const sanitizeFullEndpoint = (value) => {
+  const trimmed = value.trim();
+  if (!trimmed) {
+    return '';
+  }
+
+  const [protocol, rest] = trimmed.split('://');
+  if (!rest) {
+    return sanitizeBaseUrl(trimmed);
+  }
+
+  return `${protocol}://${rest.replace(/\/+/g, '/')}`.replace(/\/$/, '');
+};
+
+const resolveApiEndpoint = () => {
+  const envEndpoint = (import.meta.env?.VITE_COUNTER_API_ENDPOINT ?? '').trim();
+  if (envEndpoint) {
+    return sanitizeFullEndpoint(envEndpoint);
+  }
+
+  const envBaseUrl = (import.meta.env?.VITE_COUNTER_API_URL ?? '').trim();
+  if (envBaseUrl) {
+    return `${sanitizeBaseUrl(envBaseUrl)}/api/visits`;
+  }
+
+  if (typeof window !== 'undefined') {
+    const globalEndpoint = window.__LOS_ANDES_COUNTER_API__;
+    if (typeof globalEndpoint === 'string' && globalEndpoint.trim()) {
+      return sanitizeFullEndpoint(globalEndpoint.trim());
+    }
+
+    const isLocalhost = /^(localhost|127\.0\.0\.1|::1)$/i.test(window.location.hostname);
+    if (isLocalhost) {
+      return '/api/visits';
+    }
+  }
+
+  return DEPLOYMENT_FALLBACK_ENDPOINT;
+};
+
+const API_ENDPOINT = resolveApiEndpoint();
 
 const normalizeRouteName = (route) => {
   if (typeof route !== 'string') {
