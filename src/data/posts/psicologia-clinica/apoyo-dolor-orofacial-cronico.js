@@ -1,0 +1,27 @@
+const post = {
+  id: 'apoyo-dolor-orofacial-cronico',
+  slug: 'apoyo-dolor-orofacial-cronico',
+  category: 'Psicología clínica',
+  categorySlug: 'psicologia-clinica',
+  order: 200,
+  title: 'Acompañamiento psicológico para dolor orofacial crónico',
+  date: '5 de junio de 2025',
+  readTime: '9 min de lectura',
+  excerpt: 'Integra terapias de aceptación, entrenamiento sensorial y coordinación interdisciplinaria para reducir el impacto emocional del dolor persistente en la boca y la mandíbula.',
+  content: [
+    'El dolor orofacial crónico —neuralgias, disfunción temporomandibular persistente, síndrome de ardor bucal— trasciende el plano físico. Afecta la identidad, el sueño, las relaciones sociales y la confianza en los tratamientos dentales. Sin un acompañamiento psicológico estructurado, los pacientes pueden caer en ciclos de evitación, hipervigilancia y desesperanza. Este artículo propone una guía para integrar a la psicología clínica en el abordaje de estos casos complejos.',
+    'La primera fase es la evaluación biopsicosocial. El psicólogo recoge la historia del dolor, su inicio, factores desencadenantes y estrategias de afrontamiento utilizadas. Se aplican cuestionarios como el Pain Catastrophizing Scale y el Graded Chronic Pain Scale, además de escalas de ansiedad y depresión. Se exploran creencias sobre el dolor, expectativas de tratamiento y redes de apoyo. Esta información se comparte con el odontólogo y el fisioterapeuta para diseñar un plan unificado.',
+    'La psicoeducación es clave. Se explica la diferencia entre dolor agudo y crónico, cómo se sensibilizan los circuitos neuronales y por qué sentir dolor no siempre indica daño estructural. Se usan metáforas visuales —como un sistema de alarma demasiado sensible— para desactivar la idea de que el dolor es incontrolable. Se revisan también los hábitos que amplifican la respuesta nociceptiva, como la respiración superficial o el insomnio.',
+    'Las terapias basadas en la aceptación y compromiso (ACT) ayudan a que el paciente retome actividades valiosas aun con dolor. Se trabajan ejercicios de valores, planificación de metas pequeñas y prácticas de mindfulness orientadas a la cavidad oral: escaneo de mandíbula, conciencia de la lengua y respiración diafragmática con enfoque en la articulación temporomandibular. Estas prácticas reducen la reactividad emocional y promueven la autocompasión.',
+    'El entrenamiento sensorial complementa la terapia. Se introducen técnicas de desensibilización graduada donde el paciente toca suavemente las áreas dolorosas con diferentes texturas, registrando sensaciones sin juicio. También se utilizan ejercicios de imaginería motora donde se visualizan movimientos mandibulares fluidos antes de realizarlos, lo que puede disminuir la rigidez y el miedo al movimiento (kinesiofobia).',
+    'El componente conductual incluye higiene del sueño, programación de descansos y gestión del estrés. Se enseña a identificar señales tempranas de tensión muscular en cuello y hombros, integrando micro pausas durante el trabajo. Se coordinan sesiones con fisioterapeutas para alinear los ejercicios físicos y evitar mensajes contradictorios.',
+    'Las intervenciones cognitivas apuntan a reestructurar pensamientos catastróficos. Se trabaja en detectar frases como “nunca me curaré” o “si como algo duro me romperé la mandíbula” y se reemplazan por afirmaciones basadas en evidencia. Se utilizan registros diarios que comparan la intensidad del dolor con variables como estrés, alimentación o sueño para demostrar que existen moduladores controlables.',
+    'La comunicación entre profesionales es constante. Se realizan reuniones mensuales donde el odontólogo, el fisioterapeuta y el psicólogo revisan la evolución, ajustan objetivos y comparten observaciones. Este enfoque interdisciplinario evita duplicar esfuerzos y transmite al paciente la sensación de equipo cohesionado.',
+    'El apoyo social se fortalece mediante grupos terapéuticos o comunidades en línea moderadas por profesionales. Compartir experiencias con otras personas que viven dolor orofacial crónico reduce el aislamiento y proporciona estrategias prácticas. También se involucra a la familia para que comprenda qué comportamientos ayudan (validar, acompañar a citas) y cuáles pueden reforzar el sufrimiento (sobreprotección, minimizar el dolor).',
+    'Cuando el dolor persiste pese a las intervenciones, se evalúa la necesidad de terapia farmacológica adicional con el médico tratante. El psicólogo acompaña en la toma de decisiones, abordando el miedo a la medicación o las expectativas irreales respecto a analgésicos o neuromoduladores. Asimismo, se prepara al paciente para posibles recaídas, elaborando planes de acción temprana para activar recursos sin esperar a que el dolor sea incapacitante.',
+    'Las métricas de éxito no se limitan a la reducción del dolor. Se miden mejoras en la calidad de vida, el retorno a actividades sociales, el tiempo de sueño y la disminución de conductas evitativas. Estas victorias se celebran y se registran, reforzando la percepción de progreso.',
+    'El acompañamiento psicológico transforma la narrativa del paciente: del “no puedo más” al “sé qué hacer cuando aparece el dolor”. Esta reconfiguración mental no solo alivia la carga emocional, también potencia los resultados clínicos y fortalece la relación terapéutica con el equipo odontológico.'
+  ]
+};
+
+export default post;
