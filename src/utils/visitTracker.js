@@ -85,7 +85,14 @@ const normalizeRouteName = (route) => {
     return '';
   }
 
-  return route.trim().toLowerCase();
+  const trimmed = route.trim().toLowerCase();
+  if (!trimmed) {
+    return '';
+  }
+
+  const [path = ''] = trimmed.split(/[?#]/);
+  const normalized = path.replace(/^\/+/, '').replace(/\/+$/, '').replace(/\/+/g, '/');
+  return normalized;
 };
 
 export const reportVisit = async (route) => {

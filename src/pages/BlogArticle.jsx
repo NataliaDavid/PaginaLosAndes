@@ -8,7 +8,8 @@ import { useVisitTracker } from '../utils/visitTracker';
 
 const BlogArticle = () => {
   const { slug } = useParams();
-  useVisitTracker('blog');
+  const trackerRoute = slug ? `blog/${slug}` : null;
+  useVisitTracker(trackerRoute);
   const post = blogPosts.find((entry) => entry.slug === slug);
   const relatedPosts = blogPosts.filter((entry) => entry.slug !== slug).slice(0, 3);
 
