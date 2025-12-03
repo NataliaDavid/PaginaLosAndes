@@ -46,6 +46,39 @@ const resolveApiEndpoint = () => {
 };
 
 const API_ENDPOINT = resolveApiEndpoint();
+const KNOWN_BOT_PATTERNS = [
+  /googlebot/i,
+  /bingbot/i,
+  /yandexbot/i,
+  /duckduckbot/i,
+  /baiduspider/i,
+  /sogou/i,
+  /semrushbot/i,
+  /ahrefsbot/i,
+  /mj12bot/i,
+  /crawler/i,
+  /spider/i,
+  /bot/i,
+  /headless/i,
+  /preview/i,
+];
+
+const isLikelyBot = () => {
+  if (typeof window === 'undefined') {
+    return true;
+  }
+
+  if (window.__LOS_ANDES_DISABLE_TRACKING__) {
+    return true;
+  }
+
+  const userAgent = (window.navigator && window.navigator.userAgent) || '';
+  if (!userAgent) {
+    return false;
+  }
+
+  return KNOWN_BOT_PATTERNS.some((pattern) => pattern.test(userAgent));
+};
 
 const normalizeRouteName = (route) => {
   if (typeof route !== 'string') {
@@ -86,7 +119,7 @@ export const reportVisit = async (route) => {
 
 export const useVisitTracker = (route) => {
   useEffect(() => {
-    if (!route) {
+    if (!route || isLikelyBot()) {
       return;
     }
 
