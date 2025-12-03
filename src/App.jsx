@@ -15,6 +15,7 @@ import WhatsappRedirectPage from './pages/WhatsappRedirectPage';
 import Seo from './components/Seo';
 import { OG_IMAGE_URL, SITE_URL } from './utils/seo';
 import { scrollToHash } from './utils/scroll';
+import { useSessionDurationTracker } from './utils/visitTracker';
 
 const ScrollManager = () => {
   const location = useLocation();
@@ -47,9 +48,15 @@ const ScrollManager = () => {
   return null;
 };
 
+const SessionDurationTracker = () => {
+  useSessionDurationTracker();
+  return null;
+};
+
 const Layout = () => (
   <div className="min-h-screen flex flex-col bg-white text-gray-900">
     <ScrollManager />
+    <SessionDurationTracker />
     <NavBar />
     <main className="flex-1">
       <Outlet />

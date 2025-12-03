@@ -1,7 +1,7 @@
 import Contact from '../components/Contact';
 import Seo from '../components/Seo';
 import { OG_IMAGE_URL, SITE_URL } from '../utils/seo';
-import { useVisitTracker } from '../utils/visitTracker';
+import { useRouteDurationTracker, useVisitTracker } from '../utils/visitTracker';
 import placeholder43 from '../assets/placeholder-4x3.svg';
 import plan1Img from '../assets/ortodoncia/plan1.JPG';
 import plan2Img from '../assets/ortodoncia/plan2.JPG';
@@ -77,6 +77,7 @@ const OrtodonciaPage = () => {
     'Conoce nuestros planes de ortodoncia (Mini Roth, MBT y Autoligado) con explicaciones breves, número de controles aproximados y opciones promocionales.';
   const canonical = `${SITE_URL}/ortodoncia`;
   useVisitTracker('ortodoncia');
+  useRouteDurationTracker('ortodoncia');
 
   return (
     <>

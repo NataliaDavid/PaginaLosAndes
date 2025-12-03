@@ -2,10 +2,11 @@ import { useEffect } from 'react';
 import Seo from '../components/Seo';
 import { OG_IMAGE_URL, SITE_URL } from '../utils/seo';
 import { WHATSAPP_URL } from '../utils/whatsapp';
-import { useVisitTracker } from '../utils/visitTracker';
+import { useRouteDurationTracker, useVisitTracker } from '../utils/visitTracker';
 
 const WhatsappRedirectPage = () => {
   useVisitTracker('whatsapp');
+  useRouteDurationTracker('whatsapp');
   useEffect(() => {
     const timer = window.setTimeout(() => {
       window.location.replace(WHATSAPP_URL);

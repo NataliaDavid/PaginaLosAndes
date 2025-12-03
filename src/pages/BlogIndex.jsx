@@ -6,7 +6,7 @@ import { BUSINESS_ID, OG_IMAGE_URL, SITE_URL, WEBSITE_ID } from '../utils/seo';
 import { toIsoDate } from '../utils/dates';
 import { scrollToHash } from '../utils/scroll';
 import blogPosts from '../data/posts';
-import { useVisitTracker } from '../utils/visitTracker';
+import { useRouteDurationTracker, useVisitTracker } from '../utils/visitTracker';
 
 const HIGHLIGHT_LIMIT = 3;
 const HIGHLIGHT_CHAR_LIMIT = 160;
@@ -87,6 +87,7 @@ const BlogIndex = () => {
   const location = useLocation();
   const navigate = useNavigate();
   useVisitTracker('blog');
+  useRouteDurationTracker('blog');
   const [activeCategory, setActiveCategory] = useState(DEFAULT_CATEGORY);
   const handleContactNavigation = useCallback(() => {
     const targetHash = '#contacto';
