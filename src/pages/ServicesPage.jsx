@@ -2,6 +2,7 @@ import Contact from '../components/Contact';
 import Services from '../components/Services';
 import Seo from '../components/Seo';
 import { OG_IMAGE_URL, SITE_URL } from '../utils/seo';
+import { Link } from 'react-router-dom';
 
 const CTAButton = () => (
   <div className="mt-8 flex justify-center">
@@ -68,6 +69,18 @@ const ServicesPage = () => {
         </div>
       </section>
       <Services />
+      <section className="bg-slate-50 px-6 py-12">
+        <div className="mx-auto flex max-w-4xl flex-col gap-5 rounded-3xl border border-slate-100 bg-white p-7 shadow-sm md:flex-row md:items-center md:justify-between md:p-9">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-700">Cuidado integral</p>
+            <h2 className="mt-2 text-2xl font-semibold text-slate-950" style={{ fontFamily: '"Playfair Display", serif' }}>Conoce otros servicios de salud</h2>
+            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-600">Encuentra recursos que complementan el cuidado de tu sonrisa y tu bienestar general.</p>
+          </div>
+          <Link to="/otros-servicios" className="inline-flex shrink-0 items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-700 transition hover:text-cyan-600">
+            Ver otros servicios <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+      </section>
       <Contact />
     </>
   );

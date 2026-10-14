@@ -72,6 +72,12 @@ const Footer = () => {
           </p>
           <div className="flex flex-col items-center gap-2 sm:flex-row">
             <a
+              href="/otros-servicios"
+              className="inline-flex items-center gap-2 rounded-full border border-transparent bg-white px-4 py-2 font-semibold uppercase tracking-[0.3em] text-cyan-600 shadow-sm transition hover:border-cyan-200 hover:text-cyan-700"
+            >
+              Otros servicios
+            </a>
+            <a
               href="#inicio"
               className="inline-flex items-center gap-2 rounded-full border border-transparent bg-white px-4 py-2 font-semibold uppercase tracking-[0.3em] text-cyan-600 shadow-sm transition hover:border-cyan-200 hover:text-cyan-700"
             >

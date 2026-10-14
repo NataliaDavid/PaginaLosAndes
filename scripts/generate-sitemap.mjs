@@ -33,6 +33,12 @@ const urls = [
     lastmod: today,
   },
   {
+    loc: `${SITE_URL}/otros-servicios`,
+    changefreq: 'monthly',
+    priority: '0.7',
+    lastmod: today,
+  },
+  {
     loc: `${SITE_URL}/ortodoncia`,
     changefreq: 'monthly',
     priority: '0.9',

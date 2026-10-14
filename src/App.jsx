@@ -7,6 +7,7 @@ import BlogIndex from './pages/BlogIndex';
 import BlogArticle from './pages/BlogArticle';
 import Home from './pages/Home';
 import ServicesPage from './pages/ServicesPage';
+import OtherServicesPage from './pages/OtherServicesPage';
 import SuccessStoriesPage from './pages/SuccessStoriesPage';
 import AgendaPage from './pages/AgendaPage';
 import ContactPage from './pages/ContactPage';
@@ -110,6 +111,7 @@ const App = () => (
     <Route element={<Layout />}>
       <Route index element={<Home />} />
       <Route path="servicios" element={<ServicesPage />} />
+      <Route path="otros-servicios" element={<OtherServicesPage />} />
       <Route path="ortodoncia" element={<OrtodonciaPage />} />
       <Route path="casos-de-exito" element={<SuccessStoriesPage />} />
       <Route path="agenda" element={<AgendaPage />} />

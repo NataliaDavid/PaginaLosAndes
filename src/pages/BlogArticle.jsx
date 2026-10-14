@@ -186,6 +186,34 @@ const BlogArticle = () => {
           </div>
         </div>
       </div>
+      {post.relatedResource && (
+        <aside className="relative z-10 mx-auto mt-10 max-w-4xl px-6" aria-label={post.relatedResource.label}>
+          <div className="rounded-3xl border border-cyan-100 bg-cyan-50/70 p-7 md:p-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-700">{post.relatedResource.label}</p>
+            <h2 className="mt-3 text-2xl font-semibold text-slate-950" style={{ fontFamily: '"Playfair Display", serif' }}>{post.relatedResource.title}</h2>
+            <p className="mt-3 max-w-2xl leading-relaxed text-slate-600">{post.relatedResource.description}</p>
+            <a href={post.relatedResource.href} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-700 transition hover:text-cyan-600">
+              Leer en Endomédicos <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </aside>
+      )}
+      {Array.isArray(post.sources) && post.sources.length > 0 && (
+        <section className="relative z-10 mx-auto mt-10 max-w-4xl px-6" aria-labelledby="fuentes-articulo">
+          <div className="border-t border-slate-200 pt-7">
+            <h2 id="fuentes-articulo" className="text-lg font-semibold text-slate-900" style={{ fontFamily: '"Playfair Display", serif' }}>Fuentes consultadas</h2>
+            <ul className="mt-3 space-y-2 text-sm text-slate-600">
+              {post.sources.map((source) => (
+                <li key={source.href}>
+                  <a href={source.href} target="_blank" rel="noreferrer" className="text-cyan-700 underline decoration-cyan-300 underline-offset-4 transition hover:text-cyan-600">
+                    {source.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
       {relatedPosts.length > 0 && (
         <section className="relative z-10 mt-20 max-w-6xl mx-auto px-6">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
