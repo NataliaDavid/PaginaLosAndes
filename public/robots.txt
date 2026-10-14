@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://losandes-soacha.com/sitemap.xml
+Sitemap: https://www.losandes-soacha.com/sitemap.xml
