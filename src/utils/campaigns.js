@@ -26,9 +26,9 @@ export const CAMPAIGN_CONTENT = {
         'Revisiones periódicas, ortodoncia, implantes y estética dental en un solo lugar.',
     },
     seo: {
-      title: 'Consultorio Odontológico Los Andes | Odontología integral en Soacha',
+      title: 'Odontología integral en Soacha | Consultorio Los Andes',
       description:
-        'Agenda tu cita con especialistas en odontología general, ortodoncia, implantología, diseño de sonrisa y periodoncia en el Consultorio Odontológico Los Andes en Soacha.',
+        'Odontología general, ortodoncia, implantes, periodoncia y diseño de sonrisa en Soacha. Agenda tu cita.',
       ogImage: OG_IMAGE_URL,
       url: `${SITE_URL}/`,
     },

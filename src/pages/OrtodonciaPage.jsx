@@ -72,9 +72,9 @@ const plans = [
 ];
 
 const OrtodonciaPage = () => {
-  const title = 'Ortodoncia en Soacha: planes y tipos de brackets | Consultorio Los Andes';
+  const title = 'Ortodoncia en Soacha | Consultorio Los Andes';
   const description =
-    'Conoce nuestros planes de ortodoncia (Mini Roth, MBT y Autoligado) con explicaciones breves, número de controles aproximados y opciones promocionales.';
+    'Conoce opciones de brackets, alineadores y controles de ortodoncia en Soacha. Agenda tu valoración.';
   const canonical = `${SITE_URL}/ortodoncia`;
   useVisitTracker('ortodoncia');
   useRouteDurationTracker('ortodoncia');
